@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e5b94c" />
+      <stop offset="100%" stop-color="#996515" />
+    </linearGradient>
+  </defs>
+  <!-- Shield shape -->
+  <path d="M 50 5 L 88 20 C 88 55 75 80 50 95 C 25 80 12 55 12 20 Z" fill="url(#shieldGrad)" stroke="url(#goldBorder)" stroke-width="4"/>
+  <!-- Inner dividing line -->
+  <path d="M 50 15 L 50 88" stroke="#334155" stroke-width="2" stroke-dasharray="2 2"/>
+  <!-- Left Wing (Scout blue/slate) -->
+  <path d="M 46 25 C 38 28 32 35 30 46 C 36 43 43 45 46 48 C 36 52 32 60 33 72 C 38 65 44 65 46 68 Z" fill="#38bdf8" opacity="0.9"/>
+  <!-- Right Wing (Scout white/silver) -->
+  <path d="M 54 25 C 62 28 68 35 70 46 C 64 43 57 45 54 48 C 64 52 68 60 67 72 C 62 65 56 65 54 68 Z" fill="#f8fafc" opacity="0.95"/>
+</svg>
