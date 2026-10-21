@@ -3,6 +3,7 @@ import confetti from 'canvas-confetti';
 import { WingsOfFreedomIcon } from './WingsOfFreedomIcon';
 import { BIRTHDAY_CONFIG } from '../config/birthdayContent';
 import { Sparkles, Sun, Heart, ChevronDown } from 'lucide-react';
+import { assetPath } from '../utils/assetPath';
 
 interface BirthdayRevealProps {
   onClimaxReached?: () => void;
@@ -63,7 +64,7 @@ export const BirthdayReveal: React.FC<BirthdayRevealProps> = ({ onClimaxReached 
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         {/* Real Attack on Titan Scenic Wallpaper */}
         <img
-          src="/images/aot-shiganshina.webp"
+          src={assetPath('/images/aot-shiganshina.webp')}
           alt="Attack on Titan Horizon"
           className="absolute inset-0 w-full h-full object-cover object-center opacity-25 filter contrast-125 brightness-90 mix-blend-luminosity scale-105"
         />

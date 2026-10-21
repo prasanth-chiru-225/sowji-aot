@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { WingsOfFreedomIcon } from './WingsOfFreedomIcon';
 import { ArrowRight, FastForward, ShieldAlert, Radio } from 'lucide-react';
+import { assetPath } from '../utils/assetPath';
 
 interface IntroSequenceProps {
   onComplete: () => void;
@@ -72,7 +73,7 @@ export const IntroSequence: React.FC<IntroSequenceProps> = ({
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         {/* Real Attack on Titan Wall Background */}
         <img
-          src="/images/aot-walls-landscape.webp"
+          src={assetPath('/images/aot-walls-landscape.webp')}
           alt="Attack on Titan Colossal Wall"
           className="absolute inset-0 w-full h-full object-cover object-center opacity-30 filter contrast-125 brightness-75 scale-105 animate-pulse-subtle"
         />

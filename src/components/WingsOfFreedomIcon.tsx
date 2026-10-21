@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { assetPath } from '../utils/assetPath';
 
 interface WingsOfFreedomIconProps {
   className?: string;
@@ -27,7 +28,7 @@ export const WingsOfFreedomIcon: React.FC<WingsOfFreedomIconProps> = ({
 
       {!imageError ? (
         <img
-          src="/images/scout-logo.png"
+          src={assetPath('/images/scout-logo.png')}
           alt="Scout Regiment Wings of Freedom Logo"
           width={size}
           height={size}

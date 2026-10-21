@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { Volume2, VolumeX, Music, Info } from 'lucide-react';
+import { assetPath } from '../utils/assetPath';
 
 interface AudioControllerProps {
   isAutoStartRequested?: boolean;
@@ -134,7 +135,7 @@ export const AudioController: React.FC<AudioControllerProps> = ({
 
   // Set up custom MP3 in /audio/theme.mp3
   useEffect(() => {
-    const audio = new Audio('/audio/theme.mp3');
+    const audio = new Audio(assetPath('/audio/theme.mp3'));
     audio.loop = true;
     audio.volume = 0.75;
     audio.preload = 'auto';

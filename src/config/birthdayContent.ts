@@ -1,3 +1,5 @@
+import { assetPath } from "../utils/assetPath";
+
 export interface ChapterItem {
   id: number;
   roman: string;
@@ -78,7 +80,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     regimentCode: "SCOUT-EXP-1024",
     clearanceLevel: "CLASSIFIED // LEVEL OMEGA",
     expeditionLogDate: "24.10 // TIME IMMEMORIAL",
-    subjectPhoto: "/photos/photo-1.jpg",
+    subjectPhoto: assetPath("/photos/photo-1.jpg"),
     typewriterLetter: [
       "Hey Sowji,",
       "If you're reading this, then you've officially made it to the most important mission of the year.",
@@ -103,7 +105,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       ],
       themeColor: "from-stone-900 via-titan-stone to-titan-dark",
       scoutQuote: "“The world is cruel, but it is also very beautiful.”",
-      backgroundImage: "/images/aot-walls-landscape.webp"
+      backgroundImage: assetPath("/images/aot-walls-landscape.webp")
     },
     {
       id: 2,
@@ -119,7 +121,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       ],
       themeColor: "from-scout-emerald via-titan-stone to-titan-dark",
       scoutQuote: "“If you win, you live. If you don't fight, you can't win. But with you, every fight feels winnable.”",
-      backgroundImage: "/images/aot-shiganshina.webp"
+      backgroundImage: assetPath("/images/aot-shiganshina.webp")
     },
     {
       id: 3,
@@ -135,7 +137,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       ],
       themeColor: "from-crimson-deep via-titan-stone to-titan-dark",
       scoutQuote: "“Give your heart to the things and people that truly matter.”",
-      backgroundImage: "/images/aot-heroes-bg.jpg"
+      backgroundImage: assetPath("/images/aot-heroes-bg.jpg")
     },
     {
       id: 4,
@@ -151,7 +153,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       ],
       themeColor: "from-scout-cloak via-slate-900 to-titan-dark",
       scoutQuote: "“Because you were born into this world, you are already free.”",
-      backgroundImage: "/images/aot-scout-bg.png"
+      backgroundImage: assetPath("/images/aot-scout-bg.png")
     },
     {
       id: 5,
@@ -167,7 +169,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       ],
       themeColor: "from-amber-950 via-titan-charcoal to-titan-dark",
       scoutQuote: "“To Sowji: May your journey ahead be boundless.”",
-      backgroundImage: "/images/aot-shiganshina.webp"
+      backgroundImage: assetPath("/images/aot-shiganshina.webp")
     }
   ],
 
@@ -178,7 +180,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       date: "Log Entry #001",
       location: "Wall Rose Inner District",
       caption: "Where two paths crossed and an unspoken alliance was forged.",
-      imageSrc: "/photos/photo-1.jpg",
+      imageSrc: assetPath("/photos/photo-1.jpg"),
       tag: "ORIGIN POINT",
       notes: "The beginning of conversations that would last for hours without either of us noticing time pass."
     },
@@ -188,7 +190,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       date: "Log Entry #002",
       location: "Scout Headquarters",
       caption: "That calm, graceful presence that makes every tough day instantly brighter.",
-      imageSrc: "/photos/photo-2.jpg",
+      imageSrc: assetPath("/photos/photo-2.jpg"),
       tag: "AURA OF HOPE",
       notes: "Proof that having someone who genuinely listens is one of life's greatest gifts."
     },
@@ -198,7 +200,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       date: "Log Entry #003",
       location: "District Courtyard",
       caption: "Unfiltered laughter, ridiculous theories, and solving zero problems while feeling a hundred times lighter.",
-      imageSrc: "/photos/photo-3.jpg",
+      imageSrc: assetPath("/photos/photo-3.jpg"),
       tag: "SHARED LAUGHS",
       notes: "The simplest shared jokes become the strongest armor against bad days."
     },
@@ -208,7 +210,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       date: "Log Entry #004",
       location: "Observation Tower",
       caption: "Always finding reasons to smile, even when the world gets hectic.",
-      imageSrc: "/photos/photo-4.jpg",
+      imageSrc: assetPath("/photos/photo-4.jpg"),
       tag: "VITAL ENERGY",
       notes: "A signature vibe that naturally puts everyone around at ease."
     },
@@ -218,7 +220,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       date: "Log Entry #005",
       location: "Outer Gate Horizon",
       caption: "Through stress, chaos, and busy schedules, remaining the dependable anchor.",
-      imageSrc: "/photos/photo-5.jpg",
+      imageSrc: assetPath("/photos/photo-5.jpg"),
       tag: "LOYALTY",
       notes: "Real friendship isn't about talking every single second; it's knowing that whenever you do, nothing has shifted."
     },
@@ -228,7 +230,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       date: "Log Entry #006",
       location: "Shiganshina Ridge",
       caption: "Natural, unposed, and 100% genuine — the real Sowji that everyone loves.",
-      imageSrc: "/photos/photo-6.jpg",
+      imageSrc: assetPath("/photos/photo-6.jpg"),
       tag: "AUTHENTICITY",
       notes: "The moments in-between are always the ones that stick in memory the longest."
     },
@@ -238,7 +240,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       date: "Log Entry #007",
       location: "District Vista",
       caption: "Sunset lighting matching the warmth of an extraordinary friend.",
-      imageSrc: "/photos/photo-7.jpg",
+      imageSrc: assetPath("/photos/photo-7.jpg"),
       tag: "SUNSET PATROL",
       notes: "May your days always be touched by this kind of golden warmth."
     },
@@ -248,7 +250,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       date: "Log Entry #008",
       location: "Regiment Training Grounds",
       caption: "Fierce, independent, capable, and never afraid to chase what she wants.",
-      imageSrc: "/photos/photo-8.jpg",
+      imageSrc: assetPath("/photos/photo-8.jpg"),
       tag: "STRENGTH",
       notes: "Watching your resilience and ambition is a constant inspiration."
     },
@@ -258,7 +260,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       date: "Log Entry #009",
       location: "Festival Grounds",
       caption: "Dressed up, celebrating milestones, and bringing life to the party.",
-      imageSrc: "/photos/photo-9.jpg",
+      imageSrc: assetPath("/photos/photo-9.jpg"),
       tag: "CELEBRATION",
       notes: "Every room gets ten times livelier when you're there."
     },
@@ -268,7 +270,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       date: "Log Entry #010",
       location: "Inner Sanctum",
       caption: "Calm in the storm, graceful under pressure, and always true to herself.",
-      imageSrc: "/photos/photo-10.jpg",
+      imageSrc: assetPath("/photos/photo-10.jpg"),
       tag: "GRACE",
       notes: "Never lose that quiet confidence that defines who you are."
     },
@@ -278,7 +280,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       date: "Log Entry #011",
       location: "The Boundary of Tomorrow",
       caption: "Dreaming big, talking about the future, and refusing to settle for ordinary.",
-      imageSrc: "/photos/photo-11.jpg",
+      imageSrc: assetPath("/photos/photo-11.jpg"),
       tag: "ASPIRATION",
       notes: "The world beyond the walls belongs to people who dare to dream."
     },
@@ -288,7 +290,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       date: "24 October Special",
       location: "The Golden Dawn",
       caption: "An unbreakable pact of friendship, dedicated with the Wings of Freedom.",
-      imageSrc: "/photos/photo-12.jpg",
+      imageSrc: assetPath("/photos/photo-12.jpg"),
       tag: "ANNIVERSARY",
       notes: "Happy Birthday Sowji. May every chapter ahead be brighter than the last."
     }
@@ -297,7 +299,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
   secretMessage: {
     clue: "Not every treasure is found beyond the walls. Some are hidden in the words we leave behind.",
     salutation: "Sowji,",
-    attachedPhoto: "/photos/photo-2.jpg",
+    attachedPhoto: assetPath("/photos/photo-2.jpg"),
     paragraphs: [
       "I don't know if I say it enough, but I'm genuinely glad that you're part of my life.",
       "Some friendships become special through the smallest things: random conversations, unexpected laughs, stupid jokes, and moments that seem ordinary until you look back and realize how much they mean.",

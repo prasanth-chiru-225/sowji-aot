@@ -10,6 +10,7 @@ import { AudioController } from './components/AudioController';
 import { AtmosphereEffects } from './components/AtmosphereEffects';
 import { WingsOfFreedomIcon } from './components/WingsOfFreedomIcon';
 import { BIRTHDAY_CONFIG } from './config/birthdayContent';
+import { assetPath } from './utils/assetPath';
 
 export function App() {
   const [showIntro, setShowIntro] = useState<boolean>(true);
@@ -55,7 +56,7 @@ export function App() {
               {/* Background AoT Art */}
               <div className="absolute inset-0 pointer-events-none">
                 <img
-                  src="/images/aot-scout-bg.png"
+                  src={assetPath('/images/aot-scout-bg.png')}
                   alt="Scout Regiment Expedition"
                   className="w-full h-full object-cover object-top opacity-20 filter contrast-125 brightness-75"
                 />
