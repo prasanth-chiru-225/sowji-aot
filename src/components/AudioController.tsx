@@ -1,14 +1,12 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useImperativeHandle, useRef, useState, useCallback } from 'react';
 import { Volume2, VolumeX, Music, Info } from 'lucide-react';
 import { assetPath } from '../utils/assetPath';
 
-interface AudioControllerProps {
-  isAutoStartRequested?: boolean;
+export interface AudioControllerHandle {
+  start: () => void;
 }
 
-export const AudioController: React.FC<AudioControllerProps> = ({
-  isAutoStartRequested = false,
-}) => {
+export const AudioController = React.forwardRef<AudioControllerHandle>((_, ref) => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [hasInteracted, setHasInteracted] = useState<boolean>(false);
   const [showInfo, setShowInfo] = useState<boolean>(false);
@@ -197,6 +195,8 @@ export const AudioController: React.FC<AudioControllerProps> = ({
     }
   }, [initWebAudio]);
 
+  useImperativeHandle(ref, () => ({ start: startAudio }), [startAudio]);
+
   const stopAudio = useCallback(() => {
     if (customAudioRef.current) {
       customAudioRef.current.pause();
@@ -214,12 +214,6 @@ export const AudioController: React.FC<AudioControllerProps> = ({
       startAudio();
     }
   };
-
-  useEffect(() => {
-    if (isAutoStartRequested && !hasInteracted) {
-      startAudio();
-    }
-  }, [isAutoStartRequested, hasInteracted, startAudio]);
 
   // Clean up
   useEffect(() => {
@@ -300,4 +294,6 @@ export const AudioController: React.FC<AudioControllerProps> = ({
       )}
     </div>
   );
-};
+});
+
+AudioController.displayName = 'AudioController';

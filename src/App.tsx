@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { IntroSequence } from './components/IntroSequence';
 import { ArchiveDossier } from './components/ArchiveDossier';
 import { StoryChapters } from './components/StoryChapters';
@@ -6,7 +6,7 @@ import { MemoryGallery } from './components/MemoryGallery';
 import { SecretLetter } from './components/SecretLetter';
 import { BirthdayReveal } from './components/BirthdayReveal';
 import { NavigationProgress } from './components/NavigationProgress';
-import { AudioController } from './components/AudioController';
+import { AudioController, AudioControllerHandle } from './components/AudioController';
 import { AtmosphereEffects } from './components/AtmosphereEffects';
 import { WingsOfFreedomIcon } from './components/WingsOfFreedomIcon';
 import { BIRTHDAY_CONFIG } from './config/birthdayContent';
@@ -14,7 +14,7 @@ import { assetPath } from './utils/assetPath';
 
 export function App() {
   const [showIntro, setShowIntro] = useState<boolean>(true);
-  const [requestAudio, setRequestAudio] = useState<boolean>(false);
+  const audioControllerRef = useRef<AudioControllerHandle>(null);
   const [atmosphereIntensity, setAtmosphereIntensity] = useState<'fog' | 'dramatic' | 'sunrise'>('fog');
 
   const handleIntroComplete = () => {
@@ -23,7 +23,9 @@ export function App() {
   };
 
   const handleStartAudio = () => {
-    setRequestAudio(true);
+    // Keep playback inside the intro click's user gesture so browser autoplay
+    // policies allow the soundtrack to start.
+    audioControllerRef.current?.start();
   };
 
   const handleClimaxReached = () => {
@@ -36,7 +38,7 @@ export function App() {
       <AtmosphereEffects intensity={atmosphereIntensity} />
 
       {/* Persistent Audio Controls */}
-      <AudioController isAutoStartRequested={requestAudio} />
+      <AudioController ref={audioControllerRef} />
 
       {/* Intro Sequence or Main Experience */}
       {showIntro ? (
